@@ -10,12 +10,13 @@ import { AllergenDetailInterface } from '../../interfaces';
   styleUrls: [ './allergens-detail.page.scss' ],
 } )
 export class AllergensDetailPage implements OnInit {
-
   allergen: AllergenDetailInterface;
+
   constructor (
     private route: ActivatedRoute,
     private allergensService: AllergensService,
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.allergen = this.allergensService.getAllergenById( this.route.snapshot.params[ 'id' ] );

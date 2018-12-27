@@ -1,3 +1,8 @@
-.allergenDetails {
-    padding: 1em;
+ion-tabs {
+    div {
+        overflow-y: scroll;
+        img {
+            width: 100%;
+        }
+    }
 }

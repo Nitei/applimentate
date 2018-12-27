@@ -7,16 +7,49 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-tabs>
 
-<ion-content class="bg-softest">
-  <ion-img src="{{allergen.imgSummary}}"></ion-img>
-  <div>
-    <p class="allergenDetails"> {{ allergen.summary | translate }}</p>
-  </div>
-  <div>
-    <p class="allergenDetails"> {{ allergen.food | translate }}</p>
-  </div>
-  <div>
-    <p class="allergenDetails"> {{ allergen.health | translate }}</p>
-  </div>
-</ion-content>
+  <ion-tab tab="Summary">
+    <div>
+      <img src="{{allergen.imgSummary}}">
+      <p>{{ allergen.summary | translate }}</p>
+    </div>
+  </ion-tab>
+
+  <ion-tab tab="Health">
+    <div>
+      <img src="{{allergen.imgSummary}}">
+      <p>{{ allergen.health | translate }}</p>
+    </div>
+  </ion-tab>
+
+  <ion-tab tab="Food">
+    <div>
+      <img src="{{allergen.imgSummary}}">
+      <p>{{ allergen.food | translate }}</p>
+    </div>
+  </ion-tab>
+
+
+  <ion-tab-bar slot="bottom">
+
+    <ion-tab-button tab="Summary">
+      <ion-icon name="book"></ion-icon>
+      <ion-label>{{ 'HOME.SUMMARY' | translate }}</ion-label>
+      <ion-badge>1</ion-badge>
+    </ion-tab-button>
+
+    <ion-tab-button tab="Health">
+      <ion-icon name="medkit"></ion-icon>
+      <ion-label>{{ 'HOME.HEALT' | translate }}</ion-label>
+      <ion-badge>1</ion-badge>
+    </ion-tab-button>
+
+    <ion-tab-button tab="Food">
+      <ion-icon name="pizza"></ion-icon>
+      <ion-label>{{ 'HOME.FOOD' | translate }}</ion-label>
+      <ion-badge>1</ion-badge>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
