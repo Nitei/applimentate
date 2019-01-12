@@ -1,6 +1,6 @@
 import { AllergensService } from '../../services/allergens.service';
 import { Component, OnInit } from '@angular/core';
-import { AllergenInterface } from '../../interfaces/index';
+import { AllergensList } from '../../interfaces/allergen.interface';
 
 @Component( {
     selector: 'app-allergens',
@@ -8,7 +8,7 @@ import { AllergenInterface } from '../../interfaces/index';
     styleUrls: [ 'allergens.page.scss' ]
 } )
 export class AllergensPage implements OnInit {
-    allergens: AllergenInterface[];
+    allergens: AllergensList[];
 
     constructor ( private allergensServie: AllergensService ) { }
 

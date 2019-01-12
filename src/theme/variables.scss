@@ -77,15 +77,17 @@
   --ion-color-light-tint: #f5f6f9;
 
   /** custom colors **/
-  --green-softest: #fefcd7;
-  --green-soft: #a6cb45;
-  --green-heavy: #71b238;
-  --green-heaviest: #6a8347;
+  --ion-color-green-softest: #fefcd7;
+  --ion-color-green-softy: #c2f38c;
+  --ion-color-green-soft: #a6cb45;
+  --ion-color-green-heavy: #71b238;
+  --ion-color-green-heaviest: #6a8347;
 
   /** wood **/
-  --brown-softest: #E6BF83;
-  --brown-soft: #BE975B;
-  --brown-medium: #785115;
-  --brown-heavy: #643D01;
-  --brown-heaviest: #461F00;
+  --ion-color-brown-softest: #E6BF83;
+  --ion-color-brown-soft: #BE975B;
+  --ion-color-brown-softy: #e4b270;
+  --ion-color-brown-medium: #785115;
+  --ion-color-brown-heavy: #643D01;
+  --ion-color-brown-heaviest: #461F00;
 }

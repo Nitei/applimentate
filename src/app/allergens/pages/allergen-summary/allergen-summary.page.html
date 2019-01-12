@@ -1,0 +1,14 @@
+<ion-content class="bg-softest">
+  <ion-card>
+    <ion-card-header>
+      <ion-slides pager>
+        <ion-slide *ngFor="let image of imagesAllergen">
+          <ion-img src="{{ srcImgAllergen + '/' + allergenName + '/' + allergenName + image + '.png'}}"></ion-img>
+        </ion-slide>
+      </ion-slides>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ 'ALLERGENS.SUMMARY.' + allergenName  | translate }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

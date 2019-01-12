@@ -22,7 +22,7 @@
     "MUSTARD": "Mostaza",
     "FISH": "Pescado",
     "SOY": "Soja",
-    "SUMMARIES": {
+    "SUMMARY": {
       "LUPINS": "Altramuz, Lupinus mutabilis, también conocido como chocho, lupino o tarwi, pertenece a la familia de las leguminosas. Su interés nutricional principal viene dado por su alto contenido proteico. Hay que tener cuidado con él y con cualquier producto obtenido.",
       "CELERY": "El apio, Apium graveolens, es empleado tanto crudo como cocinado, y se utilizan todas sus partes aunque destacan sus tallos y hojas.",
       "PEANUTS": "Cacahuete, Arachis hypogaea, también conocido como maní, es una legumbre. Destaca por su alto contenido en fitoesteroles y ácidos grasos.",
@@ -38,7 +38,7 @@
       "FISH": "El pescado puede producir alergia tanto por las proteínas que contiene como por la histamina que presenta y por Anisakis. Aunque el alérgeno principal es la proteína parvalbúmina que se encuentra en el tejido muscular. Dichas proteínas son resistentes al cocinado y su cantidad varía según la especie, por lo que hay personas que son alérgicas a un tipo de pescado, o a pescados de familias diferentes. Los que producen menos alergias son el cazón, el atún. Su alergia se puede desencadenar no solo por ingesta, también por contacto e inhalación.",
       "SOY": "Soja o Soya, Glycine max, pertenece la familia de las leguminosas y su importancia nutricional reside en que posee alto contenido proteico debido a que presenta en su composición los 8 aminoácidos esenciales, contenido medio en aceite, y además presenta isoflavonas y fitoestrógenos."
     },
-    "FOODS": {
+    "FOOD": {
       "LUPINS": "Se consume la semilla, empleada en fresco en diversos platos de la gastronomía. También se emplea en panificación la harina que se obtiene de él.",
       "CELERY": "Se suele emplear en ensaladas, sopas, zumo de tomate, y también como aromatizante. Aunque su poder alergénico disminuye con la cocción no indica que se pueda consumir a la ligera si se es sensible a este alimento.",
       "PEANUTS": "Se consume la semilla con sal, tostada, también recubierta de chocolate, otro producto  muy consumido es la mantequilla de cacahuete, y hay que prestar atención a los alimentos en los que se emplea el aceite de cacahuete, producto muy empleado en la cocina asiática y en la comida hindú.",

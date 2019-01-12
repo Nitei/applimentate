@@ -16,17 +16,20 @@
 }
 
 ion-content.bg-softest {
-  --background: var(--green-softest);
+  --background: var(--ion-color-green-softest);
 }
 
 ion-content.wd-softest {
-  --background: var(--brown-softest);
+  --background: var(--ion-color-brown-softest);
 }
 
 ion-content.wd-heaviest {
-  --background: var(--brown-heaviest);
+  --background: var(--ion-color-brown-softy);
 }
 
 ion-content.gr-soft {
-  --background: var(--green-soft);
+  --background: var(--ion-color-green-soft);
+}
+ion-content.gr-softy {
+  --background: var(--ion-color-green-softy);
 }

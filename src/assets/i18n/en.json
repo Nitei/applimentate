@@ -22,7 +22,7 @@
     "MUSTARD": "Mustard",
     "FISH": "Fish",
     "SOY": "Soy",
-    "SUMMARIES": {
+    "SUMMARY": {
       "LUPINS": "Lupinus mutabilis, also known as chocho, lupino or tarwi, belongs to the family of legumes. Its main nutritional interest is given by its high protein content. You have to be careful with it and with any product obtained.",
       "CELERY": "The celery, Apium graveolens, is used both raw and cooked, and all its parts are used although its stems and leaves stand out.",
       "PEANUTS": "Peanut, Arachis hypogaea, also known as peanuts, is a legume. It stands out for its high content of phytosterols and fatty acids.",
@@ -38,7 +38,7 @@
       "FISH": "The fish can produce allergy both for the proteins it contains and for the histamine it presents and for Anisakis. Although the main allergen is the parvalbumin protein found in muscle tissue. These proteins are resistant to cooking and their quantity varies according to the species, so there are people who are allergic to a type of fish, or fish from different families. Those that produce less allergies are the dogfish, the tuna. Your allergy can be triggered not only by intake, but also by contact and inhalation.",
       "SOY": "Soy or soy, Glycine max, belongs to the family of legumes and its nutritional importance lies in that it has high protein content because it has in its composition the 8 essential amino acids, medium content in oil, and also has isoflavones and phytoestrogens."
     },
-    "FOODS": {
+    "FOOD": {
       "LUPINS": "The seed is consumed, used fresh in various dishes of gastronomy. The flour obtained from it is also used in baking.",
       "CELERY": "It is usually used in salads, soups, tomato juice, and also as a flavoring. Although its allergenic power decreases with cooking does not indicate that it can be consumed lightly if you are sensitive to this food.",
       "PEANUTS": "The seed is consumed with salt, toast, also covered with chocolate, another product very consumed is peanut butter, and we must pay attention to the foods in which the peanut oil is used, a product widely used in Asian cuisine and in the Hindu food.",

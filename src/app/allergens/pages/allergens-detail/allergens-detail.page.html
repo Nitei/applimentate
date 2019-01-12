@@ -1,22 +1,47 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>{{ allergen.name | translate }}</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+        <ion-button slot="end" routerLink="/home">
+          <ion-icon slot="icon-only" name="home"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>{{ 'ALLERGENS.' + allergenName | translate }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
 
-<ion-content class="bg-softest">
-  <ion-img src="{{allergen.imgSummary}}"></ion-img>
-  <div>
-    <p class="allergenDetails"> {{ allergen.summary | translate }}</p>
-  </div>
-  <div>
-    <p class="allergenDetails"> {{ allergen.food | translate }}</p>
-  </div>
-  <div>
-    <p class="allergenDetails"> {{ allergen.health | translate }}</p>
-  </div>
-</ion-content>
+  <ion-tabs class="pad-top">
+    <ion-tab tab="Summary">
+      <ion-router-outlet name="Summary"></ion-router-outlet>
+    </ion-tab>
+    <ion-tab tab="Health">
+      <ion-router-outlet name="Health"></ion-router-outlet>
+    </ion-tab>
+    <ion-tab tab="Food">
+      <ion-router-outlet name="Food"></ion-router-outlet>
+    </ion-tab>
+
+    <ion-tab-bar slot="bottom">
+
+      <ion-tab-button tab="Summary" href="/allergens/ALLERGENS.{{allergenName}}/(Summary:Summary)">
+        <ion-icon name="book"></ion-icon>
+        <ion-label>{{ 'HOME.SUMMARY' | translate }}</ion-label>
+        <ion-badge>{{ numberBadgeSummary }}</ion-badge>
+      </ion-tab-button>
+
+      <ion-tab-button tab="Health" href="/allergens/ALLERGENS.{{allergenName}}/(Health:Health)">
+        <ion-icon name="medkit"></ion-icon>
+        <ion-label>{{ 'HOME.HEALTH' | translate }}</ion-label>
+        <ion-badge>{{ numberBadgeHealth }}</ion-badge>
+      </ion-tab-button>
+
+      <ion-tab-button tab="Food" href="/allergens/ALLERGENS.{{allergenName}}/(Food:Food)">
+        <ion-icon name="pizza"></ion-icon>
+        <ion-label>{{ 'HOME.FOOD' | translate }}</ion-label>
+        <ion-badge>{{ numberBadgeFood }}</ion-badge>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
