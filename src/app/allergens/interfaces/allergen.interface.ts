@@ -1,4 +1,4 @@
-export interface AllergenInterface {
+export interface AllergensList {
     name: string;
     icon: string;
 }

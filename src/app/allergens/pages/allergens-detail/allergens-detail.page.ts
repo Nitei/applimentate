@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AllergensService } from '../../services';
-import { AllergenDetailInterface } from '../../interfaces';
-
+import { Component, OnInit } from '@angular/core';
+import { AllergensService } from '../../services/allergens.service';
 
 @Component( {
   selector: 'app-allergens-details',
@@ -10,14 +8,20 @@ import { AllergenDetailInterface } from '../../interfaces';
   styleUrls: [ './allergens-detail.page.scss' ],
 } )
 export class AllergensDetailPage implements OnInit {
+  allergenName: string;
+  numberBadgeSummary: number;
+  numberBadgeHealth: number;
+  numberBadgeFood: number;
 
-  allergen: AllergenDetailInterface;
   constructor (
     private route: ActivatedRoute,
     private allergensService: AllergensService,
   ) { }
 
   ngOnInit() {
-    this.allergen = this.allergensService.getAllergenById( this.route.snapshot.params[ 'id' ] );
+    this.allergenName = this.allergensService.getAllergenNameFromParams( this.route.snapshot.params.id );
+    this.numberBadgeSummary = this.allergensService.srcImgNameSummary.length;
+    this.numberBadgeHealth = this.allergensService.srcImgNameHealth.length;
+    this.numberBadgeFood = this.allergensService.srcImgNameFood.length;
   }
 }
