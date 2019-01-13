@@ -9,7 +9,7 @@ import { AllergensService } from '../../services/allergens.service';
 export class AllergenFoodPage implements OnInit {
   allergenName: string;
   srcImgAllergen: string;
-  imagesAllergen: object;
+  imagesAllergen: string[];
 
   constructor (
     private allergensService: AllergensService,
