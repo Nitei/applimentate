@@ -9,13 +9,11 @@ import { AllergensList } from '../interfaces/allergen.interface';
 export class AllergensService {
 
     private allergenList: AllergensList[];
-    public aName: string;
     private srcIcon = '../../../assets/icon/';
-    public srcImg = '../../../assets/img/ImgAllergens/';
+    public srcImg = '../../../assets/img/ImgAllergens';
     public srcImgNameSummary = [ '_S01', '_S02', '_S03' ];
     public srcImgNameHealth = [ '_H01', '_H02', '_H03' ];
     public srcImgNameFood = [ '_F01', '_F02', '_F03' ];
-
 
     private namesList = [
         'LUPINS', 'CELERY', 'PEANUTS', 'CRUSTACEANS', 'SULFUR_DIOXIDE_AND_SULPHITES', 'NUTS',
@@ -29,13 +27,6 @@ export class AllergensService {
 
     getList(): AllergensList[] {
         return this.allergenList;
-    }
-
-    getAllergenNameFromParams( data ): string {
-        // data = 'ALLERGENS.LUPINS'
-        this.aName = data.slice( data.indexOf( '.' ) + 1 );
-        // this.aName = 'LUPINS'
-        return this.aName;
     }
 
     private getDefaultAllergenList(): AllergensList[] {
