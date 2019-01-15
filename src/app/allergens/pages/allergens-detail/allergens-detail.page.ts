@@ -8,7 +8,9 @@ import { AllergensService } from '../../services/allergens.service';
   styleUrls: [ './allergens-detail.page.scss' ],
 } )
 export class AllergensDetailPage implements OnInit {
-  allergenName: string;
+  allergenId: string; // Ejemplo: 'ALLERGENS.LUPINS'
+  allergenName: string; // 'LUPINS'
+  srcImgAllergen: string;
   numberBadgeSummary: number;
   numberBadgeHealth: number;
   numberBadgeFood: number;
@@ -19,7 +21,8 @@ export class AllergensDetailPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.allergenName = this.allergensService.getAllergenNameFromParams( this.route.snapshot.params.id );
+    this.allergenId = this.route.snapshot.params.id;
+    this.allergenName = this.allergenId.slice( this.allergenId.indexOf( '.' ) + 1 );
     this.numberBadgeSummary = this.allergensService.srcImgNameSummary.length;
     this.numberBadgeHealth = this.allergensService.srcImgNameHealth.length;
     this.numberBadgeFood = this.allergensService.srcImgNameFood.length;

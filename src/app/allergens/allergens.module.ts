@@ -15,16 +15,11 @@ import { AllergenHealthPage } from './pages/allergen-health/allergen-health.page
 import { AllergenFoodPage } from './pages/allergen-food/allergen-food.page';
 
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', component: AllergensPage },
   {
     path: ':id', component: AllergensDetailPage,
     children: [
-      {
-        path: '',
-        outlet: 'Summary',
-        component: AllergenSummaryPage,
-      },
       {
         path: 'Summary',
         outlet: 'Summary',
@@ -40,6 +35,11 @@ const routes: Routes = [
         outlet: 'Food',
         component: AllergenFoodPage,
       },
+      {
+        path: '',
+        outlet: 'Summary',
+        component: AllergenSummaryPage,
+      }
     ]
   },
 ];
@@ -60,6 +60,5 @@ const routes: Routes = [
     AllergenFoodPage
   ],
   providers: [ AllergensService ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
 } )
 export class AllergensModule { }

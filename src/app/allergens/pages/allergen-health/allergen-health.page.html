@@ -2,8 +2,8 @@
   <ion-card>
     <ion-card-header>
       <ion-slides pager>
-        <ion-slide *ngFor="let image of imagesAllergen">
-          <ion-img src="{{ srcImgAllergen + '/' + allergenName + '/' + allergenName + image + '.png'}}"></ion-img>
+        <ion-slide *ngFor="let extension of extensionImagesAllergen">
+          <ion-img src="{{srcImgAllergen}}/{{allergenName}}/{{allergenName}}{{extension}}.png"></ion-img>
         </ion-slide>
       </ion-slides>
     </ion-card-header>

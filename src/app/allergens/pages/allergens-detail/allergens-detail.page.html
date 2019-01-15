@@ -3,11 +3,11 @@
     <ion-toolbar>
       <ion-buttons slot="start">
         <ion-back-button></ion-back-button>
-        <ion-button slot="end" routerLink="/home">
+        <ion-button slot="start" routerLink="/home">
           <ion-icon slot="icon-only" name="home"></ion-icon>
         </ion-button>
+        <ion-title>{{ allergenId | translate }}</ion-title>
       </ion-buttons>
-      <ion-title>{{ 'ALLERGENS.' + allergenName | translate }}</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -25,19 +25,19 @@
 
     <ion-tab-bar slot="bottom">
 
-      <ion-tab-button tab="Summary" href="/allergens/ALLERGENS.{{allergenName}}/(Summary:Summary)">
+      <ion-tab-button tab="Summary" href="/allergens/{{allergenId}}/(Summary:Summary)">
         <ion-icon name="book"></ion-icon>
         <ion-label>{{ 'HOME.SUMMARY' | translate }}</ion-label>
         <ion-badge>{{ numberBadgeSummary }}</ion-badge>
       </ion-tab-button>
 
-      <ion-tab-button tab="Health" href="/allergens/ALLERGENS.{{allergenName}}/(Health:Health)">
+      <ion-tab-button tab="Health" href="/allergens/{{allergenId}}/(Health:Health)">
         <ion-icon name="medkit"></ion-icon>
         <ion-label>{{ 'HOME.HEALTH' | translate }}</ion-label>
         <ion-badge>{{ numberBadgeHealth }}</ion-badge>
       </ion-tab-button>
 
-      <ion-tab-button tab="Food" href="/allergens/ALLERGENS.{{allergenName}}/(Food:Food)">
+      <ion-tab-button tab="Food" href="/allergens/{{allergenId}}/(Food:Food)">
         <ion-icon name="pizza"></ion-icon>
         <ion-label>{{ 'HOME.FOOD' | translate }}</ion-label>
         <ion-badge>{{ numberBadgeFood }}</ion-badge>

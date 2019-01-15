@@ -1,7 +1,16 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ActivatedRoute } from '@angular/router';
+
 
 import { AllergenFoodPage } from './allergen-food.page';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { routes } from '../../allergens.module';
+import { AllergensPage } from '../allergens-list/allergens.page';
+import { AllergensDetailPage } from '../allergens-detail/allergens-detail.page';
+import { AllergenSummaryPage } from '../allergen-summary/allergen-summary.page';
+import { AllergenHealthPage } from '../allergen-health/allergen-health.page';
 
 describe( 'AllergenFoodPage', () => {
     let component: AllergenFoodPage;
@@ -9,8 +18,29 @@ describe( 'AllergenFoodPage', () => {
 
     beforeEach( async( () => {
         TestBed.configureTestingModule( {
-            declarations: [ AllergenFoodPage ],
-            schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+            declarations: [
+                AllergensPage,
+                AllergensDetailPage,
+                AllergenSummaryPage,
+                AllergenHealthPage,
+                AllergenFoodPage
+            ],
+            schemas: [ NO_ERRORS_SCHEMA ],
+            imports: [
+                RouterTestingModule.withRoutes( routes ),
+                TranslateModule.forRoot( {} )
+            ],
+            providers: [ TranslateService,
+                {
+                    provide: ActivatedRoute, useValue: {
+                        snapshot: {
+                            parent: {
+                                params: { id: 'ALLERGENS.LUPINS' },
+                            }
+                        }
+                    }
+                }
+            ],
         } )
             .compileComponents();
     } ) );

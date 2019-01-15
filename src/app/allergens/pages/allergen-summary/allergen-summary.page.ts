@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AllergensService } from '../../services/allergens.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component( {
   selector: 'app-allergen-summary',
@@ -7,17 +8,20 @@ import { AllergensService } from '../../services/allergens.service';
   styleUrls: [ './allergen-summary.page.scss' ],
 } )
 export class AllergenSummaryPage implements OnInit {
-  allergenName: string;
+  allergenId: string; // Ejemplo: 'ALLERGENS.LUPINS'
+  allergenName: string; // 'LUPINS'
   srcImgAllergen: string;
-  imagesAllergen: object;
+  extensionImagesAllergen: object;
 
   constructor (
+    private route: ActivatedRoute,
     private allergensService: AllergensService,
   ) { }
 
   ngOnInit() {
-    this.allergenName = this.allergensService.aName;
+    this.allergenId = this.route.snapshot.parent.params.id;
+    this.allergenName = this.allergenId.slice( this.allergenId.indexOf( '.' ) + 1 );
     this.srcImgAllergen = this.allergensService.srcImg;
-    this.imagesAllergen = this.allergensService.srcImgNameSummary;
+    this.extensionImagesAllergen = this.allergensService.srcImgNameSummary;
   }
 }
