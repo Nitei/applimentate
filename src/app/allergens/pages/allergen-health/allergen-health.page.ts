@@ -11,7 +11,7 @@ export class AllergenHealthPage implements OnInit {
   allergenId: string; // Ejemplo: 'ALLERGENS.LUPINS'
   allergenName: string; // 'LUPINS'
   srcImgAllergen: string;
-  extensionImagesAllergen: object;
+  extensionImagesAllergen: string[];
 
   constructor (
     private route: ActivatedRoute,

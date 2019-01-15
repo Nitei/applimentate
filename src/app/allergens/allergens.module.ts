@@ -21,6 +21,11 @@ export const routes: Routes = [
     path: ':id', component: AllergensDetailPage,
     children: [
       {
+        path: '',
+        outlet: 'Summary',
+        component: AllergenSummaryPage,
+      },
+      {
         path: 'Summary',
         outlet: 'Summary',
         component: AllergenSummaryPage,
@@ -35,11 +40,6 @@ export const routes: Routes = [
         outlet: 'Food',
         component: AllergenFoodPage,
       },
-      {
-        path: '',
-        outlet: 'Summary',
-        component: AllergenSummaryPage,
-      }
     ]
   },
 ];

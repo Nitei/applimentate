@@ -11,7 +11,7 @@ export class AllergenSummaryPage implements OnInit {
   allergenId: string; // Ejemplo: 'ALLERGENS.LUPINS'
   allergenName: string; // 'LUPINS'
   srcImgAllergen: string;
-  extensionImagesAllergen: object;
+  extensionImagesAllergen: string[];
 
   constructor (
     private route: ActivatedRoute,
@@ -23,5 +23,6 @@ export class AllergenSummaryPage implements OnInit {
     this.allergenName = this.allergenId.slice( this.allergenId.indexOf( '.' ) + 1 );
     this.srcImgAllergen = this.allergensService.srcImg;
     this.extensionImagesAllergen = this.allergensService.srcImgNameSummary;
+    console.log( this.extensionImagesAllergen.length );
   }
 }
