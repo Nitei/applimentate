@@ -13,7 +13,7 @@ export class AllergensService {
     * Cambiar el nombre de un atributo privado lleva poca regresión, en teoría,
      * así que bueno, no está mal que le hayas acortado el nombre
     * */
-    private srcIcon = '../../../assets/icon/';
+    private readonly srcIcon = '../../../assets/icon/';
     /*
     * Si éstos atributos son públicos se pueden modificar desde fuera y si lo hacemos
     * podemos volvernos locos buscando dónde (o cuando, si se hace dinámicamente)
@@ -22,13 +22,22 @@ export class AllergensService {
     * y en el futuro lo agradecerás.
     * */
     private aName: string;
-    private srcImg: string = '../../../assets/img/ImgAllergens/';
-    private srcImgNameSummary: string[] = [ '_S01', '_S02', '_S03' ];
-    private srcImgNameHealth: string[] = [ '_H01', '_H02', '_H03' ];
-    private srcImgNameFood: string[] = [ '_F01', '_F02', '_F03' ];
+    private readonly srcImg: string = '../../../assets/img/ImgAllergens/';
+    /*
+    * En Typescript tenemos la palabra reservada "readonly" la cual, como su nombre
+    * indica, es para definir un atributo que no se puede modificar. Es diferente a
+    * "const" ya que ésta se utiliza sobre atributos de una clase/objecto y "const"
+    * se utiliza para definir una constante que hace referencia a algo (objecto, numero,
+    * función...) dentro de un contexto (scope) determinado.
+    * La idea es que estos atributos no cambien, al menos por ahora.
+    * Cuando le añadamos back a la aplicación ya refactorizaremos
+    * */
+    private readonly srcImgNameSummary: string[] = [ '_S01', '_S02', '_S03' ];
+    private readonly srcImgNameHealth: string[] = [ '_H01', '_H02', '_H03' ];
+    private readonly srcImgNameFood: string[] = [ '_F01', '_F02', '_F03' ];
 
 
-    private namesList = [
+    private readonly namesList = [
         'LUPINS', 'CELERY', 'PEANUTS', 'CRUSTACEANS', 'SULFUR_DIOXIDE_AND_SULPHITES', 'NUTS',
         'GLUTEN', 'SESAME_SEEDS', 'EGG', 'DAIRY_PRODUCTS', 'MOLLUSCS', 'MUSTARD', 'FISH', 'SOY'
     ];

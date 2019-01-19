@@ -1,23 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { AllergensService } from '../../services/allergens.service';
+import {Component, Input} from '@angular/core';
+import { AllergenDetailInterface } from "../../interfaces";
 
 @Component( {
   selector: 'app-allergen-summary',
   templateUrl: './allergen-summary.page.html',
   styleUrls: [ './allergen-summary.page.scss' ],
 } )
-export class AllergenSummaryPage implements OnInit {
-  allergenName: string;
-  srcImgAllergen: string;
-  imagesAllergen: string[];
-
-  constructor (
-    private allergensService: AllergensService,
-  ) { }
-
-  ngOnInit() {
-    this.allergenName = this.allergensService.aName;
-    this.srcImgAllergen = this.allergensService.srcImg;
-    this.imagesAllergen = this.allergensService.srcImgNameSummary;
-  }
+/*
+* Lo mismo que en AllergenFoodPage
+* */
+export class AllergenSummaryPage {
+  @Input() allergen: AllergenDetailInterface;
 }

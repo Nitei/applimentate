@@ -1,6 +1,7 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { AllergensService } from '../../services/allergens.service';
+import { AllergenDetailInterface } from "../../interfaces";
 
 @Component( {
   selector: 'app-allergens-details',
@@ -8,10 +9,7 @@ import { AllergensService } from '../../services/allergens.service';
   styleUrls: [ './allergens-detail.page.scss' ],
 } )
 export class AllergensDetailPage implements OnInit {
-  allergenName: string;
-  numberBadgeSummary: number;
-  numberBadgeHealth: number;
-  numberBadgeFood: number;
+  allergen: AllergenDetailInterface;
 
   constructor (
     private route: ActivatedRoute,
@@ -19,9 +17,13 @@ export class AllergensDetailPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.allergenName = this.allergensService.getAllergenNameFromParams( this.route.snapshot.params.id );
-    this.numberBadgeSummary = this.allergensService.srcImgNameSummary.length;
+    this.allergen = this.allergensService.getAllergenById(this.route.snapshot.params.id );
+    /*
+    * Los badges no los necesitamos... aún. Ya llegaremos cuando metamos
+    * notificaciones Push ;)
+    * */
+    /*this.numberBadgeSummary = this.allergensService.srcImgNameSummary.length;
     this.numberBadgeHealth = this.allergensService.srcImgNameHealth.length;
-    this.numberBadgeFood = this.allergensService.srcImgNameFood.length;
+    this.numberBadgeFood = this.allergensService.srcImgNameFood.length;*/
   }
 }

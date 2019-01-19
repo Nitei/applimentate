@@ -2,7 +2,7 @@ import { AllergenInterface } from './allergen.interface';
 
 export interface AllergenDetailInterface extends AllergenInterface {
     /*
-    * Como ahora vamos a tener una lista, modificamos el atributo. Esto implica regresión
+    * Como ahora vamos a tener una lista de inmágenes, modificamos el atributo. Esto implica regresión
     * pero bueno, es la funcionalidad nueva que vamos a añadir, tenemos que hacerlo sí o sí
     * imgSummary: string --> imgsSummary: string[].
     * Y como sabemos que (o al menos por ahora) vamos a poner más, añadimos lo que nos haga falta.
